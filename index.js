@@ -16,7 +16,7 @@ const info = require("./lib/info.js");
 const BotName = 'WHATSAPP BOT'; 
 const instagram = 'https://instagram.com/Arfdnii_'; 
 const telegram = 'https://t.me/Arfdnii'; 
-const kapanbotaktif = 'KETIKA HANYA DIAKTIFKAN'; 
+const kapanbotaktif = '09.00-21.00'; 
 const youtube = 'GAADA';
 //const grupch1 = 'belum ada grup'; 
 //const grupch2 = 'belum ada grup' ; 
@@ -195,7 +195,7 @@ axios.get(`https://mhankbarbar.herokuapp.com/nulis?text=${teks}&apiKey=zFuV88pxc
 
 if (text.includes("!ytmp3")){
 const teks = text.replace(/!ytmp3 /, "")
-axios.get(`https://st4rz.herokuapp.com/api/yta?url=${teks}`).then((res) => {
+axios.get(`https://st4rz.herokuapp.com/api/yta?url=https://www.youtube.com/watch?v=_vIDmHhIkqo${teks}`).then((res) => {
     let hasil = `Audio telah tersedia pada link di bawah, silahkan klik link dan download hasilnya\n👇👇👇👇👇👇👇👇👇\n\nJudul: ${res.data.title}\n\nUkuran audio: ${res.data.filesize}\n\nLink: ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
